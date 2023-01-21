@@ -4,7 +4,7 @@
       <v-img
         :src="datos.sprites.other.home.front_default"
       ></v-img>
-      <v-card-title>{{ datos.name }}</v-card-title>
+      <v-card-title class="d-flex flex-column">{{ datos.name }}</v-card-title>
     </v-card>
   </v-container>
 </template>

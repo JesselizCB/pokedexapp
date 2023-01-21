@@ -23,9 +23,11 @@ export default {
     axios.get(this.pokemonItem.url).then((res) => {
       this.datos = res.data
     })
+
   },
   methods: {
     goToAboutPage(poke) {
+      //vamos a la ruta pasando un parametro
       this.$router.push({name:'about', params:{pokemon:poke} })
     }
   },

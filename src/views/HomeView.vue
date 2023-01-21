@@ -80,6 +80,8 @@ export default {
     //     .then((response) => {
     //       console.log(response)
     //       this.items = response.data.results
+    //     }).catch((err) => {
+    //     this.error = err.response.data
     //   })
     // }
 

@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-card class="mx-auto" max-width="344">
+    <v-card class="mx-auto" max-width="344" @click="goToAboutPage(datos)">
       <v-img
         :src="datos.sprites.other.home.front_default"
       ></v-img>
@@ -22,8 +22,12 @@ export default {
   mounted() {
     axios.get(this.pokemonItem.url).then((res) => {
       this.datos = res.data
-      console.log(this.datos)
     })
-  }
+  },
+  methods: {
+    goToAboutPage(poke) {
+      this.$router.push({name:'about', params:{pokemon:poke} })
+    }
+  },
 };
 </script>
